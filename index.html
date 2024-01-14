@@ -3,13 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FILMOHISTORY</title>
+    <title>Square Website</title>
+    <style>
+        /* Set initial background color and remove default margin */
+        body {
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+    </style>
+    <script>
+        // Function to adjust the website's size to form a square
+        function adjustToSquare() {
+            const currentWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+            const currentHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+            // Find the larger value between width and height
+            const largerValue = Math.max(currentWidth, currentHeight);
+
+            // Set the website's width and height to the larger value
+            document.body.style.width = largerValue + 'px';
+            document.body.style.height = largerValue + 'px';
+        }
+    </script>
 </head>
-<body>
+<body onload="adjustToSquare()">
 
     <header>
-        <h1>han</h1>
+        <h1>Website with Square Layout</h1>
     </header>
+    
+    <!-- Add a paragraph element with an ID -->
+    <p id="output"></p>
 
+    <script>
+        // JavaScript code
+        const windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        let s = 10;
+
+        // Log the value of the variable s
+        console.log(s);
+
+        // Log the width and height of the window
+        console.log('Window Width:', windowWidth);
+        console.log('Window Height:', windowHeight);
+
+        // Update the content of the paragraph element with the value of s
+        document.getElementById('output').innerText = 'Value of s: ' + windowWidth;
+    </script>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit quisquam nemo, nam consequatur a pariatur, similique reprehenderit vel numquam vero aliquid quasi placeat quidem. Alias voluptate possimus nam laboriosam soluta!
+        </p>
 </body>
 </html>
